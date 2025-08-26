@@ -1,0 +1,19 @@
+{
+    "name" : "AksaraNalar",
+    "version" : "1.0",
+    "description": "AksaraNalar Whatsapp Bot Multi Device",
+    "main" : "index.js",
+    "scripts": {
+        "author" : "Muhammad Syafaat",
+        "lisence" : "MIT",
+        "start": "node index.js"
+    },
+
+    "dependencies": {
+        "@whiskeysockets/baileys": "6.7.5",
+        "chalk": "^4.1.2",
+        "pino": "^8.14.1",
+        "readline": "1.3.0"
+    }
+    
+}
