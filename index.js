@@ -48,7 +48,7 @@ async function connectToWhatsapp() {
     if (usePairingCode && !lenwy.authState.creds.registered) {
         console.log(chalk.green("🧠 MASUKKAN NOMOR DENGAN AWAL 62"))
         const phoneNumber = await question(">")
-        const code = await.aksaraNalar.requestPairingCode(phoneNumber.trim())
+        const code = await aksaraNalar.requestPairingCode(phoneNumber.trim())
         console.log(chalk.cyan(`🧠 Pairing Code : ${code}`))
 }
  
@@ -59,7 +59,7 @@ async function connectToWhatsapp() {
     aksaraNalar.ev.on("connection.update", (update) => {
         const { connection, lastDisconnect } = update
         if ( connection === "close") {
-            console.log(chalk.red("❌  KONEKSI TERPUTUS, MOHON SAMBUNGKAN ULANG"))
+            console.log(chalk.red("❌ KONEKSI TERPUTUS, MOHON SAMBUNGKAN ULANG"))
             connectToWhatsApp()
         } else if ( connection === "open") {
             console.log(chalk.green("✔  BOT WHATSAPP BERHASIL TERSAMBUNG"))
